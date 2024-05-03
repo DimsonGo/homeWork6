@@ -54,11 +54,12 @@ public class Main {
 
         System.out.println();
         System.out.println("Task number nine");
-        int totalSumma = 29_000;
-        int bankOne = 0;
-        for (int montH = 1; montH <= 12; montH++){
-            bankOne = bankOne + bankOne / 100;
-            bankOne = bankOne + totalSumma;
+        double totalSumma = 29_000;
+        double bankOne = 0;
+        double annualInterestRate = 0.12;
+        for (int montH = 0; montH <= 12; montH++){
+            bankOne += totalSumma;
+            bankOne *= (1 + annualInterestRate / 12);
             System.out.println("Месяц " + montH + " сумма накоплений равна " + bankOne + " рублей");
 
         }
